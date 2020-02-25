@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    x:Class="SoundCloudClone.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:SoundCloudClone.Views"
+    android:TabbedPage.ToolbarPlacement="Bottom"
+    BarBackgroundColor="{StaticResource NavbarBackground}"
+    mc:Ignorable="d">
+    <TabbedPage.Children>
+        <NavigationPage>
+            <x:Arguments>
+                <views:HomeView Title="Home" />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage>
+            <x:Arguments>
+                <views:StreamView Title="Stream" />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage>
+            <x:Arguments>
+                <views:SearchView Title="Search" />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage>
+            <x:Arguments>
+                <views:LibraryView Title="Library" />
+            </x:Arguments>
+        </NavigationPage>
+    </TabbedPage.Children>
+</TabbedPage>
